@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Multi-directory workspace",
+    "description": "Attach multiple directories to a workspace: browse, add, remove and switch working directories, with write grants and prompt context for the model.",
+    "detail": "docs/DETAIL.md"
+  }
+}

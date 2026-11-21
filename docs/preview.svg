@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300">
+  <!-- Neutral mid-tone surface: readable beside both light and dark UIs. No text/fonts. -->
+  <rect width="640" height="300" rx="12" fill="#6b7280"/>
+  <!-- App header row: brand mark, then the workspace chip, then the session title. -->
+  <rect x="24" y="26" width="78" height="12" rx="6" fill="#f3f4f6" opacity="0.75"/>
+  <rect x="118" y="20" width="132" height="24" rx="8" fill="#ffffff" opacity="0.16" stroke="#f3f4f6" stroke-opacity="0.5"/>
+  <path d="M131 27 h11 l2.5 2.5 h10 v9 h-23.5 z" fill="#93c5fd"/>
+  <rect x="151" y="28" width="62" height="8" rx="4" fill="#f3f4f6" opacity="0.9"/>
+  <path d="M221 29.5 l5 5 l5 -5" stroke="#f3f4f6" stroke-opacity="0.7" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="264" y="26" width="96" height="12" rx="6" fill="#f3f4f6" opacity="0.55"/>
+  <rect x="372" y="26" width="58" height="12" rx="6" fill="#f3f4f6" opacity="0.3"/>
+
+  <!-- Popover, anchored under the chip with a caret pointing at it. -->
+  <path d="M184 52 l7 8 l7 -8 z" fill="#ffffff" opacity="0.12"/>
+  <rect x="118" y="58" width="330" height="212" rx="12" fill="#ffffff" opacity="0.10" stroke="#f3f4f6" stroke-opacity="0.45"/>
+  <!-- Popover title row -->
+  <rect x="136" y="74" width="112" height="10" rx="5" fill="#f3f4f6" opacity="0.9"/>
+  <rect x="404" y="73" width="26" height="10" rx="5" fill="#f3f4f6" opacity="0.35"/>
+  <!-- Attached-directories section label -->
+  <rect x="136" y="100" width="72" height="7" rx="3.5" fill="#f3f4f6" opacity="0.4"/>
+  <!-- Row 1: current directory, highlighted, with a "current" tag instead of a switch button. -->
+  <rect x="136" y="116" width="294" height="38" rx="8" fill="#ffffff" opacity="0.10" stroke="#60a5fa" stroke-width="1.5"/>
+  <path d="M148 128 h14 l3 3 h13 v12 h-30 z" fill="#93c5fd"/>
+  <rect x="184" y="126" width="112" height="8" rx="4" fill="#f3f4f6" opacity="0.9"/>
+  <rect x="184" y="139" width="164" height="6" rx="3" fill="#f3f4f6" opacity="0.35"/>
+  <rect x="366" y="127" width="38" height="14" rx="7" fill="#3b82f6" opacity="0.6"/>
+  <!-- Row 2: attached but not current; the switch button is hover-only, so it stays faint. -->
+  <rect x="136" y="160" width="294" height="38" rx="8" fill="#ffffff" opacity="0.06"/>
+  <path d="M148 172 h14 l3 3 h13 v12 h-30 z" fill="#93c5fd" opacity="0.8"/>
+  <rect x="184" y="170" width="92" height="8" rx="4" fill="#f3f4f6" opacity="0.8"/>
+  <rect x="184" y="183" width="140" height="6" rx="3" fill="#f3f4f6" opacity="0.28"/>
+  <rect x="366" y="171" width="38" height="14" rx="7" fill="#ffffff" opacity="0.16"/>
+  <rect x="412" y="172" width="12" height="12" rx="6" fill="#ffffff" opacity="0.16"/>
+  <!-- Add-directory button at the bottom of the popover. -->
+  <rect x="136" y="212" width="130" height="24" rx="8" fill="#ffffff" opacity="0.14" stroke="#f3f4f6" stroke-opacity="0.4"/>
+  <rect x="150" y="221" width="72" height="7" rx="3.5" fill="#f3f4f6" opacity="0.8"/>
+
+  <!-- Composer below, deliberately without any workspace control in its tool row. -->
+  <rect x="118" y="286" width="470" height="2" rx="1" fill="#f3f4f6" opacity="0.18"/>
+  <rect x="118" y="296" width="470" height="18" rx="9" fill="#ffffff" opacity="0.06"/>
+</svg>

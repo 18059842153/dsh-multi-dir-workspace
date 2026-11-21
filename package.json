@@ -1,0 +1,65 @@
+{
+  "name": "dsh-multi-dir-workspace",
+  "version": "0.1.0",
+  "description": "DSH plugin: attach multiple directories to a workspace, switch the working directory, and grant the model write access to each of them.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "screenshots.json",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "18059842153",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18059842153/dsh-multi-dir-workspace.git"
+  },
+  "homepage": "https://github.com/18059842153/dsh-multi-dir-workspace#readme",
+  "bugs": {
+    "url": "https://github.com/18059842153/dsh-multi-dir-workspace/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "workspace",
+    "directories",
+    "monorepo",
+    "working-directory"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
