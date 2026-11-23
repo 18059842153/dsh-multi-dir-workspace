@@ -32,3 +32,5 @@ DSH 核心的工作区严格绑定单个目录（`Workspace.path`）。插件无
 - 写入授权只在运行时有效，会话启动时重新注册；在 Windows 上只有 DSH 自己的文件工具会遵守额外授权
   （子进程权限不变）。
 - 路径用 `path.resolve` 规范化；符号链接根目录会被沙箱策略拒绝写入，但仍然可读。
+- 供 UI 使用的 HTTP 路由会先走 DSH 的 `connection.requestRejection` 检查（Host/Origin 栅栏 + 浏览器
+  登录 cookie），未认证的请求直接 401/403 拒绝，所以浏览器里打开的其它网页无法调用它改目录或授权。
