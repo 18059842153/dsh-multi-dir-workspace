@@ -42,4 +42,7 @@ on top of the public extension points:
   DSH's own file tools honor the extra grants (child process permissions are unchanged).
 - Paths are canonicalized with `path.resolve`; symlink roots are rejected by the
   sandbox policy for writes but remain readable.
+- The HTTP routes behind the UI run DSH's `connection.requestRejection` fence first
+  (Host/Origin check plus the browser login cookie). Unauthenticated callers get 401/403,
+  so a web page open in your browser cannot use them to change directories or grant access.
 
