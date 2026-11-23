@@ -1,4 +1,4 @@
-﻿/**
+/**
  * dsh-multi-dir-workspace —— 宿主半边（纯 JS，零 DSH 包依赖）。
  *
  * DSH 内核的 Workspace 严格单目录，插件无法改动内核；本插件在其之上"叠加"
@@ -25,6 +25,7 @@ export const inject = [
   'sandboxPolicy',
   'agents',
   'webServer',
+  'connection',
 ]
 
 const ROUTE = '/dsh-multi-dir-workspace/dirs'
@@ -314,6 +315,14 @@ export function apply(ctx) {
       kind: 'exact',
       path: ROUTE,
       handler: async (req, res) => {
+        // 安全栅栏：与官方 web 路由同一道 Host/Origin + 浏览器认证检查。
+        // 没有它，浏览器里任意网页都能 POST 到这里改工作目录、授予沙箱写权限。
+        const rejection = ctx.connection.requestRejection(req)
+        if (rejection !== undefined) {
+          res.statusCode = rejection
+          res.end()
+          return
+        }
         const send = (status, obj) => {
           try {
             const payload = JSON.stringify(obj)
